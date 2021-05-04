@@ -388,6 +388,26 @@ body {
   background-color: #F5FAFE;
 }
 
+.search__input:focus {
+  outline: none;
+}
+
+.search__input::placeholder {
+  color: #BDBDBD;
+}
+
+.search__input::-moz-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input:-moz-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
 .search__button {
   position: absolute;
   top: 0;
