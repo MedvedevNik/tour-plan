@@ -520,6 +520,7 @@ img {
     flex-direction: column;
     width: 16px;
     height: 11px;
+    padding: 0;
     border: none;
     background-color: #ffffff;
     cursor: pointer;
@@ -534,6 +535,9 @@ img {
 @media (max-width: 576px) {
   .logo {
     width: 99px;
+  }
+  .navbar-top {
+    padding: 28px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
