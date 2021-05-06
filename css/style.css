@@ -396,6 +396,7 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  font-weight: bold;
 }
 
 .logo {
@@ -420,6 +421,7 @@ img {
   border: none;
   color: #333333;
   background-color: #F5FAFE;
+  cursor: pointer;
 }
 
 .search__input:focus {
@@ -450,6 +452,7 @@ img {
   height: 100%;
   border: none;
   background-color: #EC1F46;
+  cursor: pointer;
 }
 
 .user {
@@ -505,7 +508,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     max-width: 576px;
     width: 92%;
