@@ -427,6 +427,12 @@ img {
   flex-basis: 100%;
 }
 
+.stars__icon {
+  width: 8px;
+  height: 8px;
+  fill: #F2994A;
+}
+
 .offer {
   padding: 4px 9px;
   font-size: 10px;
@@ -560,6 +566,12 @@ img {
   border: none;
   background-color: #EC1F46;
   cursor: pointer;
+}
+
+.search__icon {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
 }
 
 .user {
