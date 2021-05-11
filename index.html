@@ -16,6 +16,9 @@
     <!-- styles -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- scripts -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ba04430c-484f-4d2e-8b99-735b6eb8bd88&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <header class="navbar">
@@ -195,15 +198,7 @@
               <button class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
-            <div class="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5414446132645!2d98.29703101534484!3d7.8382577086555685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1620746147267!5m2!1sru!2sru"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                class="map__iframe"
-              ></iframe>
-            </div>
+            <div class="map" id="map"></div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-rigth -->
