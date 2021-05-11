@@ -922,7 +922,6 @@ body {
   }
   .hotel-right {
     flex-direction: column;
-    min-height: 450px;
   }
   .hotel-right__booking {
     margin-bottom: 20px;
