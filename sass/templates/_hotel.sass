@@ -36,7 +36,7 @@
     flex-direction: column
     justify-content: space-between
   &-slider
-    width: 728px
+    width: 730px
     height: 450px
     position: relative
     border-radius: 8px
@@ -114,29 +114,30 @@
   &__counter-small
     font-size: 10px
 .booking
-  width: 358px
+  width: 350px
   min-height: 210px
   padding: 28px
   border-radius: 8px
   background-color: $bg-darken
   color: $light
+  font-family: 'Nunito', sans-serif
   &__info
     display: flex
     justify-content: space-between
-    margin-bottom: 9px
+    margin-bottom: 8px
   &__price
     display: flex
     flex-direction: column
   &__start
-    font-weight: normal
+    font-weight: 400
     font-size: 10px
     line-height: 14px
   &__cost
     font-weight: 800
     font-size: 24px
-    line-height: 33px
+    line-height: 31px
   &__rent
-    font-weight: normal
+    font-weight: 400
     font-size: 12px
     line-height: 16px
   &__room
@@ -144,12 +145,12 @@
   &__text
     display: flex
     justify-content: space-between
-    align-items: center
+    align-items: flex-start
     &:not(:last-child)
-      margin-bottom: 8px
+      margin-bottom: 10px
   &__description
     margin-left: 9px
-    font-weight: normal
+    font-weight: 400
     font-size: 12px
     line-height: 16px
   &__call-center
@@ -163,7 +164,7 @@
     height: 14px
   &__button
     width: 100%
-    min-height: 45px
+    min-height: 44px
     font-weight: 600
     font-size: 14px
     line-height: 19px
@@ -189,4 +190,7 @@
   background-color: #000
   border-radius: 10px
   &__iframe
+    border: none
+    width: 100%
+    height: 213px
     border-radius: inherit
