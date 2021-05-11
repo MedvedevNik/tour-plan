@@ -964,4 +964,10 @@ body {
     height: 179px;
   }
 }
+
+@media (max-width: 321px) {
+  .map__iframe {
+    height: 176px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
