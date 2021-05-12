@@ -24,7 +24,7 @@ const hotelSwiper = new Swiper('.hotel-slider', {
 //init map
 ymaps.ready(init);
 function init(){
-  var myMap = new ymaps.Map("map", {
+  var myMap = new ymaps.Map('map', {
       center: [7.838178344448822,98.29888316061488],
       zoom: 15,
       controls: []
