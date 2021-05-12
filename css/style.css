@@ -1279,8 +1279,7 @@ body {
   }
   .reviews-slider__text {
     max-width: 219px;
-    height: 260px;
-    overflow: hidden;
+    height: 268px;
     text-align: left;
   }
   .reviews-slider__button {
