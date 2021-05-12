@@ -54,7 +54,22 @@
     height: 210px
   .newsletter
     padding: 90px 0 93px
-
+  .reviews
+    &__title
+      margin-bottom: 50px
+      font-size: 30px
+      line-height: 38px
+    &-slider
+      &__slide
+        padding: 0px 60px 30px 65px
+      &__text
+        max-width: 455px
+      &__button
+        top: 46%
+        &--prev
+          left: 0
+        &--next
+          right: 0
 @media (max-width: 767px)
   .container, .newsletter-wrapper
     max-width: 576px
@@ -162,6 +177,30 @@
       height: 179px
   .subscribe
     width: 100%
+  .reviews
+    &__title
+      margin-bottom: 42px
+      font-size: 18px
+      line-height: 23px
+    &-slider
+      &__slide
+        padding: 0px 30px 30px
+        &::after,
+        &::before
+          display: none
+      &__text
+        max-width: 455px
+        text-align: left
+      &__button
+        top: 30px
+        &--prev
+          margin-left: -92px
+          left: 50%
+          transform: translate(-50%, 0)
+        &--next
+          margin-right: -89px
+          right: 50%
+          transform: translate(50%, 0)
 @media (max-width: 321px)
   .map
     height: 176px
