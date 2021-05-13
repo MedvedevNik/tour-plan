@@ -736,6 +736,24 @@ body {
   border-radius: 6px;
 }
 
+.search__cursor:before {
+  content: '';
+  display: none;
+  position: absolute;
+  left: 115px;
+  top: 15px;
+  width: 1px;
+  height: 13px;
+  background: #000;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.search__input:not(:focus) + .search__cursor:before {
+  display: inline-block;
+  animation: cursor 1s infinite step-end;
+}
+
 .search__input {
   width: 350px;
   height: 100%;
@@ -792,6 +810,12 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+@keyframes cursor {
+  50% {
+    background: transparent;
+  }
 }
 
 .newsletter {
@@ -1092,7 +1116,7 @@ body {
 }
 
 .card__button {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
