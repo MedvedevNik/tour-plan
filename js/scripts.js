@@ -39,4 +39,13 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   },
 });
 
+const inputSearch = document.querySelector('.search__input');
+inputSearch.addEventListener('input', () => {
+  if(inputSearch.value) {
+    inputSearch.classList.remove('search__input--blink');
+  } else {
+    inputSearch.classList.add('search__input--blink');
+  }
+});
+
 

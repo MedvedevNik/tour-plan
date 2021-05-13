@@ -47,9 +47,11 @@
     background: #000
     opacity: 0.5
     z-index: 3
-  &__input:not(:focus) + &__cursor:before
+  &__input--blink + &__cursor:before
     display: inline-block
     animation: cursor 1s infinite step-end
+  &__input:focus + &__cursor:before
+    opacity: 0
   &__input
     width: 350px
     height: 100%

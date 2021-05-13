@@ -749,9 +749,13 @@ body {
   z-index: 3;
 }
 
-.search__input:not(:focus) + .search__cursor:before {
+.search__input--blink + .search__cursor:before {
   display: inline-block;
   animation: cursor 1s infinite step-end;
+}
+
+.search__input:focus + .search__cursor:before {
+  opacity: 0;
 }
 
 .search__input {
