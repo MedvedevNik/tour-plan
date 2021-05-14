@@ -352,6 +352,14 @@ body {
   margin: auto;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .button {
   border: none;
   border-radius: 4px;
@@ -376,7 +384,7 @@ body {
 
 .breadcrumb-list__item:not(:last-child)::after {
   content: '/';
-  margin-right: 2px;
+  margin-right: 3px;
 }
 
 .breadcrumb-list__link {
@@ -394,7 +402,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .hotel-info__offer {
@@ -409,6 +417,11 @@ body {
 
 .hotel-info__description {
   margin: 0;
+  margin-top: -1px;
+}
+
+.hotel-info__rating {
+  margin-bottom: 2px;
 }
 
 .hotel-name {
@@ -826,6 +839,197 @@ body {
   }
 }
 
+.packages {
+  padding: 40px 0 70px;
+}
+
+.packages-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-template-rows: repeat(2, 500px);
+}
+
+.packages__title {
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.package {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.package--active {
+  grid-column: 1 / 3;
+  flex-direction: row;
+  width: 730px;
+}
+
+.package--active .package-picture {
+  width: 366px;
+  height: 500px;
+}
+
+.package--active .package-picture__offer {
+  padding: 8px 21px 8px 12px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.package--active .package-info {
+  width: 364px;
+  padding-top: 47px;
+  padding-left: 44px;
+}
+
+.package--active .package-info__room {
+  margin-bottom: 37px;
+  padding-left: 3px;
+}
+
+.package--active .package-info__title {
+  margin-bottom: 25px;
+}
+
+.package--active .package-info__text {
+  margin-bottom: 46px;
+}
+
+.package--active .package-info__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.package--active .package-info__footer {
+  padding-left: 3px;
+}
+
+.package--active .package-rating {
+  width: 48px;
+}
+
+.package--active .package-rating__icon {
+  fill: #F2994A;
+  height: 8px;
+  width: 8px;
+}
+
+.package-picture {
+  position: relative;
+  width: 350px;
+  height: 250px;
+}
+
+.package-picture__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.package-picture__offer {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  border-radius: 0 4px 4px 0;
+}
+
+.package-info {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 30px 21px 27px 32px;
+  background-color: #0A223D;
+  color: #ffffff;
+}
+
+.package-info__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.package-info__text {
+  margin-top: 0;
+  margin-bottom: 34px;
+  max-width: 300px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.package-info__room {
+  margin-bottom: 24px;
+}
+
+.package-info__line-text {
+  display: flex;
+  align-items: center;
+}
+
+.package-info__line-text:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.package-info__description {
+  margin-left: 14px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.package-info__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.package-info__prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.package-info__button {
+  padding: 11px 28px 10px 26px;
+  margin-bottom: -5px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.package-icon {
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+}
+
+.prices__old-price {
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: line-through;
+}
+
+.prices__price {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
 .newsletter {
   position: relative;
   max-height: 260px;
@@ -926,11 +1130,6 @@ body {
 .reviews__title {
   margin: 0;
   margin-bottom: 70px;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .reviews-slider__slide {
