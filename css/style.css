@@ -840,14 +840,14 @@ body {
 }
 
 .packages {
-  padding: 40px 0 70px;
+  padding: 40px 0 50px;
 }
 
 .packages-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  grid-template-rows: repeat(2, minmax(max-content, 500px));
+  grid-template-rows: 500px minmax(500px, 1fr);
 }
 
 .packages__title {
@@ -888,7 +888,7 @@ body {
 .package-info {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
+  height: 100%;
   padding: 30px 21px 27px 32px;
   background-color: #0A223D;
   color: #ffffff;
