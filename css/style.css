@@ -857,7 +857,6 @@ body {
 
 .package {
   display: flex;
-  width: 350px;
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
@@ -1478,7 +1477,7 @@ body {
   .packages-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    grid-template-rows: repeat(3, 525px);
+    grid-template-rows: 525px repeat(2, minmax(525px, 1fr));
   }
   .package {
     width: 350px;
@@ -1488,6 +1487,9 @@ body {
   }
   .package-picture {
     width: 350px;
+  }
+  .package-info {
+    justify-content: space-between;
   }
   .package-info__footer {
     justify-content: center;
@@ -1661,7 +1663,7 @@ body {
   .packages-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    grid-template-rows: repeat(3, 400px);
+    grid-template-rows: 400px repeat(2, minmax(400px, 1fr));
   }
   .package {
     width: 99%;
