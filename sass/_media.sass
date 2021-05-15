@@ -110,28 +110,14 @@
     &-wrapper
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 15px
-      grid-template-rows: 525px repeat(2, minmax(525px, 1fr))
+      grid-template-rows: repeat(3, 500px)
   .package
     width: 350px
     &--active
       width: 100%
-    &-picture
-      width: 350px
     &-info
-      justify-content: space-between
       &__footer
         justify-content: center
-      &__prices
-        flex-direction: row
-        flex-basis: 55%
-        justify-content: space-between
-      &__button
-        margin-bottom: 0
-        flex-basis: 100%
-        margin-top: 15px
-    &--active &-picture
-      width: 350px
-      height: 525px
     &--active &-info
       &__title
         margin-bottom: 20px
@@ -253,44 +239,26 @@
       font-size: 30px
       line-height: 38px
     &-wrapper
-      grid-template-columns: repeat(2, 1fr)
-      grid-gap: 15px
-      grid-template-rows: 400px repeat(2, minmax(400px, 1fr))
+      grid-template-columns: 1fr
+      grid-gap: 15px 0
+      grid-template-rows: 450px repeat(3, 470px)
   .package
-    width: 99%
-    &-picture
-      width: 100%
-      height: 150px
+    width: 100%
     &-info
       padding: 15px 15px 30px
       &__title
         margin-bottom: 15px
       &__room
         margin-bottom: 20px
-      &__footer
-        justify-content: center
-      &__prices
-        flex-basis: 80%
-        align-items: center
     &--active
-      width: 100%
+      grid-column: 1
     &--active &-picture
-      width: 250px
-      height: 400px
+      &__img
+        width: 250px
     &--active &-info
-      width: 57%
       padding-top: 20px
       padding-left: 20px
       padding-bottom: 30px
-      &__room
-        margin-bottom: 15px
-      &__title
-        margin-bottom: 15px
-      &__text
-        max-width: 100%
-        margin-bottom: 15px
-        font-size: 12px
-        line-height: 16px
   .newsletter
     padding-top: 113px
     max-height: 319px
@@ -363,9 +331,9 @@
       font-size: 18px
       line-height: 23px
     &-wrapper
-      grid-template-columns: repeat(1, 1fr)
+      grid-template-columns: 1fr
       column-gap: 0
-      grid-template-rows: 315px repeat(5, 1fr)
+      grid-template-rows: 350px repeat(5, 460px)
   .package
     grid-column: 1
     width: 100%
@@ -377,10 +345,11 @@
       grid-row: 1 / span 2
       flex-direction: column
     &--active &-info
-      width: 100%
+      max-width: 100%
     &--active &-picture
-      width: 100%
-      height: 387px
+      &__img
+        width: 100%
+        height: 387px
   .activities
     padding-bottom: 60px
     &__title

@@ -840,14 +840,14 @@ body {
 }
 
 .packages {
-  padding: 40px 0 50px;
+  padding: 40px 0 70px;
 }
 
 .packages-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  grid-template-rows: 500px minmax(500px, 1fr);
+  grid-template-rows: repeat(2, 500px);
 }
 
 .packages__title {
@@ -860,17 +860,12 @@ body {
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
-}
-
-.package-picture {
   position: relative;
-  width: 350px;
-  height: 250px;
 }
 
 .package-picture__img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -885,10 +880,7 @@ body {
 }
 
 .package-info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 30px 21px 27px 32px;
+  padding: 30px 20px 30px 32px;
   background-color: #0A223D;
   color: #ffffff;
 }
@@ -929,22 +921,13 @@ body {
   line-height: 15px;
 }
 
-.package-info__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
-.package-info__prices {
-  display: flex;
-  flex-direction: column;
-}
-
 .package-info__button {
+  position: absolute;
+  right: 21px;
+  bottom: 25px;
   padding: 11px 28px 10px 26px;
   margin-bottom: -5px;
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -961,10 +944,9 @@ body {
   grid-column: 1 / 3;
   order: -1;
   flex-direction: row;
-  width: 730px;
 }
 
-.package--active .package-picture {
+.package--active .package-picture__img {
   width: 366px;
   height: 500px;
 }
@@ -976,7 +958,7 @@ body {
 }
 
 .package--active .package-info {
-  width: 364px;
+  max-width: 364px;
   padding-top: 47px;
   padding-left: 44px;
 }
@@ -1025,6 +1007,7 @@ body {
 }
 
 .prices__old-price {
+  display: block;
   margin-bottom: 5px;
   font-weight: normal;
   font-size: 14px;
@@ -1477,7 +1460,7 @@ body {
   .packages-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    grid-template-rows: 525px repeat(2, minmax(525px, 1fr));
+    grid-template-rows: repeat(3, 500px);
   }
   .package {
     width: 350px;
@@ -1485,28 +1468,8 @@ body {
   .package--active {
     width: 100%;
   }
-  .package-picture {
-    width: 350px;
-  }
-  .package-info {
-    justify-content: space-between;
-  }
   .package-info__footer {
     justify-content: center;
-  }
-  .package-info__prices {
-    flex-direction: row;
-    flex-basis: 55%;
-    justify-content: space-between;
-  }
-  .package-info__button {
-    margin-bottom: 0;
-    flex-basis: 100%;
-    margin-top: 15px;
-  }
-  .package--active .package-picture {
-    width: 350px;
-    height: 525px;
   }
   .package--active .package-info__title {
     margin-bottom: 20px;
@@ -1661,16 +1624,12 @@ body {
     line-height: 38px;
   }
   .packages-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-    grid-template-rows: 400px repeat(2, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
+    grid-gap: 15px 0;
+    grid-template-rows: 450px repeat(3, 470px);
   }
   .package {
-    width: 99%;
-  }
-  .package-picture {
     width: 100%;
-    height: 150px;
   }
   .package-info {
     padding: 15px 15px 30px;
@@ -1681,37 +1640,16 @@ body {
   .package-info__room {
     margin-bottom: 20px;
   }
-  .package-info__footer {
-    justify-content: center;
-  }
-  .package-info__prices {
-    flex-basis: 80%;
-    align-items: center;
-  }
   .package--active {
-    width: 100%;
+    grid-column: 1;
   }
-  .package--active .package-picture {
+  .package--active .package-picture__img {
     width: 250px;
-    height: 400px;
   }
   .package--active .package-info {
-    width: 57%;
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 30px;
-  }
-  .package--active .package-info__room {
-    margin-bottom: 15px;
-  }
-  .package--active .package-info__title {
-    margin-bottom: 15px;
-  }
-  .package--active .package-info__text {
-    max-width: 100%;
-    margin-bottom: 15px;
-    font-size: 12px;
-    line-height: 16px;
   }
   .newsletter {
     padding-top: 113px;
@@ -1804,9 +1742,9 @@ body {
     line-height: 23px;
   }
   .packages-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     column-gap: 0;
-    grid-template-rows: 315px repeat(5, 1fr);
+    grid-template-rows: 350px repeat(5, 460px);
   }
   .package {
     grid-column: 1;
@@ -1821,9 +1759,9 @@ body {
     flex-direction: column;
   }
   .package--active .package-info {
-    width: 100%;
+    max-width: 100%;
   }
-  .package--active .package-picture {
+  .package--active .package-picture__img {
     width: 100%;
     height: 387px;
   }
