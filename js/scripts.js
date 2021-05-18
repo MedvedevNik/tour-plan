@@ -57,6 +57,7 @@ menuButton.addEventListener('click', () => {
   const navbarBottom = document.querySelector('.navbar-bottom');
 
   navbarBottom.classList.toggle('navbar-bottom--visible');
+  document.body.classList.toggle('overlay--hidden');
 });
 
 

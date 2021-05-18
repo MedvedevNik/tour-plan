@@ -1807,6 +1807,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .overlay--hidden {
+    overflow-y: hidden;
+  }
   .container, .newsletter-wrapper {
     max-width: 576px;
     width: 87%;
