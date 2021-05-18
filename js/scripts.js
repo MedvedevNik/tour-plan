@@ -1,3 +1,8 @@
+'use sctict';
+
+const menuButton = document.querySelector('.menu-button');
+
+
 const hotelSwiper = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
@@ -46,6 +51,12 @@ inputSearch.addEventListener('input', () => {
   } else {
     inputSearch.classList.add('search__input--blink');
   }
+});
+
+menuButton.addEventListener('click', () => {
+  const navbarBottom = document.querySelector('.navbar-bottom');
+
+  navbarBottom.classList.toggle('navbar-bottom--visible');
 });
 
 

@@ -40,6 +40,9 @@
           transform: scaleX(0)
         &:hover:after
           transform: scaleX(1)
+  .search
+    &__input--blink + &__cursor:before
+      display: inline-block
   .breadcrumb
     &-list
       &__link
@@ -210,11 +213,51 @@
   .container, .newsletter-wrapper
     max-width: 576px
     width: 87%
+  body
+    padding-top: 78px
   .navbar
-    &__search,
-    &-menu,
-    &__user
+    &-bottom
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 70px
+      padding-top: 30px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      padding-top: 2px
+      &__item
+        margin-bottom: 17px
+        &--mobile
+          &-visible
+            display: block
+            margin-bottom: 26px
+          &-visible:nth-child(2)
+            margin-bottom: 36px
+    &--mobile
+      &-fixed
+        position: fixed
+        width: 100%
+        left: 0
+        top: 0
+        z-index: 13
+    &__user, &__search
+      &--mobile
+        &-hidden
+          display: none
+        &-visible
+          display: flex
+    &__search
+      &--mobile
+        &-visible
+          margin-left: 0px
+          width: 245px
+    &__user
+      flex-direction: column
+      justify-content: center
   .menu
     &-button
       display: flex
@@ -231,6 +274,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .stars
     flex-basis: auto
     margin-right: 13px

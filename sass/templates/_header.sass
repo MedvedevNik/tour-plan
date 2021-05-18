@@ -28,6 +28,10 @@
       font-size: 14px
       line-height: 18px
       font-weight: bold
+    &__item
+      &--mobile
+        &-visible
+          display: none
 .logo
   width: 177px
   &__image
@@ -50,7 +54,7 @@
     opacity: 0.5
     z-index: 3
   &__input--blink + &__cursor:before
-    display: inline-block
+    display: none
     animation: cursor 1s infinite step-end
   &__input:focus + &__cursor:before
     opacity: 0
