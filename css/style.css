@@ -1828,7 +1828,7 @@ body {
   }
   .navbar-bottom--visible {
     display: block;
-    overflow-y: overlay;
+    overflow-y: auto;
   }
   .navbar-menu {
     flex-direction: column;
