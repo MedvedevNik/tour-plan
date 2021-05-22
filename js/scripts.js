@@ -4,42 +4,66 @@ const menuButton = document.querySelector('.menu-button'),
       inputSearch = document.querySelector('.search__input'),
       modal = document.querySelector('.modal'),
       modalOverlay = modal.querySelector('.modal__overlay'),
-      modalBtn = document.querySelectorAll('[data-toggle="modal"]'),
-      popupAnimate = {
-        count: -1200,
-        speed: 12,
-        startPos: -1200,
-        endPos: 0
-      };
+      modalBtn = document.querySelectorAll('[data-toggle="modal"]');
+
+const closeForm = () => {
+      popUp.style.display = 'none';
+      popupForm.reset();
+      document.body.style.overflowY = 'auto';
+}
+
+const overlayHidden = () => {
+  document.body.style.overflowY = 'hidden';
+  document.ontouchmove = function (event) {
+    event.preventDefault();
+  };
+}
+
+const toggleModal = () => {
+  modal.classList.toggle('modal--active');
+}
+
+const overlayAuto = () => {
+  document.body.style.overflowY = 'auto';
+  document.ontouchmove = function (e) {
+    return true;
+  };
+}
 
 modalBtn.forEach(function(elem) {
   elem.addEventListener('click', function() {
-    modal.classList.toggle('modal--active');
+    toggleModal();
+    overlayHidden();
   });
 });
 
-modalOverlay.addEventListener('click', function(event) {
-  
+window.addEventListener('keydown', function (e) {
+  if (modal.classList.contains('modal--active')) {
+    if(e.code == "Escape"){
+      e.preventDefault();
+      toggleModal();
+      overlayAuto();
+    }
+  }
+}); 
+
+modal.addEventListener('click', function(event) {
+  console.log(modal);
   let target = event.target;
 
   if (target.closest('.modal__close')) {
       event.preventDefault();
-      modal.classList.remove('modal--active');
+      toggleModal();
+      overlayAuto();
   } else {
       target = target.closest('.modal__content');
-
       if (!target) {
-        modal.classList.remove('modal--active');
+        toggleModal();
+        overlayAuto();
       }
     }
   }
 );
-
-modal.addEventListener('keypress', function (e) {
-    if(e.code === 'Escape') modal.classList.toggle('modal--active');
-  }); 
-
-
 
 const hotelSwiper = new Swiper('.hotel-slider', {
   // Optional parameters
