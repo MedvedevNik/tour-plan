@@ -2373,6 +2373,11 @@ body {
   .card__title {
     width: 200px;
   }
+  .modal__content {
+    padding: 25px 35px 35px;
+    margin-top: 15px;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 321px) {
@@ -2388,6 +2393,12 @@ body {
   .newsletter {
     max-height: 320px;
     padding-top: 76px;
+  }
+  .modal__content {
+    max-width: 285px;
+  }
+  .modal__button {
+    margin-bottom: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
