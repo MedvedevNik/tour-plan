@@ -95,7 +95,15 @@
     margin-bottom: 15px
     flex-basis: 47.5%
   &__input::placeholder,
-  &__message::placeholder
+  &__message::placeholder,
+  &__input::-webkit-input-placeholder,
+  &__message::-webkit-input-placeholder,
+  &__input::-moz-placeholder,
+  &__message::-moz-placeholder,
+  &__input:-ms-input-placeholder,
+  &__message:-ms-input-placeholder,
+  &__input:-moz-placeholder,
+  &__message:-moz-placeholder
     font-weight: normal
     font-size: 12px
     line-height: 15px
