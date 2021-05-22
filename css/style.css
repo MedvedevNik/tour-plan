@@ -1617,7 +1617,7 @@ body {
   max-width: 478px;
   text-align: center;
   overflow: auto;
-  max-height: 90%;
+  max-height: 95%;
 }
 
 .modal__close {
@@ -2271,7 +2271,7 @@ body {
   }
   .modal__content {
     padding: 25px 35px 35px;
-    max-width: 70%;
+    max-width: 85%;
   }
   .modal__button {
     margin-top: 15px;
