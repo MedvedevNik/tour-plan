@@ -50,7 +50,8 @@ function styles() {
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/jquery-validation/dist/jquery.validate.min.js',
     'app/js/parallax.min.js',
     'app/js/swiper-bundle.min.js',
     'app/js/main.js'

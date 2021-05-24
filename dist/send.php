@@ -68,4 +68,4 @@ try {
 }
 
 // Отображение результата
-header('Location: thanks.php');
+header('Location: thanks.html');
