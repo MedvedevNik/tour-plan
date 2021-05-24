@@ -44,14 +44,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'medvedevklaus@gmail.com'; // Логин на почте
-    $mail->Password   = '161272383Qwe'; // Пароль на почте
+    $mail->Username   = '***********@gmail.com'; // Логин на почте
+    $mail->Password   = '***********'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('medvedevklaus@gmail.com', 'Николай Медведев'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('***********@gmail.com', 'Николай Медведев'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('pengu1n4ik.pi@yandex.ru');
+    $mail->addAddress('***********.pi@yandex.ru');
 
     // Отправка сообщения
     $mail->isHTML(true);
