@@ -368,6 +368,11 @@ body {
   cursor: pointer;
 }
 
+.invalid {
+  color: #EC1F46;
+  font-size: 13px;
+}
+
 .breadcrumb-list {
   display: flex;
   align-items: center;
@@ -1075,12 +1080,10 @@ body {
   position: relative;
   width: 350px;
   height: 55px;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
-  position: absolute;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
   border: none;
@@ -1106,6 +1109,7 @@ body {
   min-width: 65px;
   background-color: #EC1F46;
   border: none;
+  border-radius: 0 4px 4px 0;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -1459,8 +1463,13 @@ body {
 .footer__input {
   padding: 0 23px;
   height: 50px;
-  margin-bottom: 15px;
-  flex-basis: 47.5%;
+  width: 100%;
+  position: relative;
+}
+
+.footer__input-group {
+  position: relative;
+  flex-basis: 48%;
 }
 
 .footer__input::placeholder, .footer__message::placeholder, .footer__input::-webkit-input-placeholder, .footer__message::-webkit-input-placeholder, .footer__input::-moz-placeholder, .footer__message::-moz-placeholder, .footer__input:-ms-input-placeholder, .footer__message:-ms-input-placeholder, .footer__input:-moz-placeholder, .footer__message:-moz-placeholder {
@@ -1474,6 +1483,7 @@ body {
   flex-basis: 100%;
   height: 123px;
   padding: 18px 23px;
+  margin-top: 15px;
   margin-bottom: 23px;
   resize: none;
 }
@@ -1652,7 +1662,7 @@ body {
 .modal__input {
   padding: 0 23px;
   height: 50px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   flex-basis: 100%;
 }
 
@@ -1667,7 +1677,7 @@ body {
   flex-basis: 100%;
   height: 123px;
   padding: 18px 23px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   resize: none;
 }
 
@@ -1685,6 +1695,7 @@ body {
   min-width: 160px;
   min-height: 50px;
   padding: 18px;
+  margin-top: 15px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -1717,8 +1728,8 @@ body {
     width: 23%;
     height: 230px;
   }
-  .footer__input {
-    flex-basis: 100%;
+  .footer__input-group {
+    width: 47%;
   }
 }
 
@@ -1911,7 +1922,10 @@ body {
     grid-template-rows: repeat(4, minmax(75px, min-content));
   }
   .footer__input {
-    flex-basis: 47%;
+    width: 100%;
+  }
+  .footer__input:first-child {
+    margin-right: 0;
   }
   .footer__logo {
     grid-row: 1 / 2;
@@ -2231,8 +2245,11 @@ body {
   .footer__contact-details .footer__title {
     margin-bottom: 22px;
   }
-  .footer__input {
+  .footer__input-group {
     flex-basis: 100%;
+  }
+  .footer__input-group:first-child {
+    margin-bottom: 15px;
   }
   .footer__icon-wrapper {
     min-width: 30px;

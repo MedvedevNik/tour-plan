@@ -6,11 +6,7 @@ const menuButton = document.querySelector('.menu-button'),
       modalOverlay = modal.querySelector('.modal__overlay'),
       modalBtn = document.querySelectorAll('[data-toggle="modal"]');
 
-const closeForm = () => {
-      popUp.style.display = 'none';
-      popupForm.reset();
-      document.body.style.overflowY = 'auto';
-}
+
 
 const overlayHidden = () => {
   document.body.style.overflowY = 'hidden';
@@ -106,19 +102,23 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   },
 });
 
-document.body.addEventListener('input', event => {
+document.body.addEventListener('input', function(event) {
 
   let target = event.target;
 
   if (target.name === 'email') {
-    target.value = target.value.replace(/[^A-Za-z ,.@]/gi, '');
+    target.value = target.value.replace(/[^A-Za-z0-9 ,.@]/gi, '');
     target.setAttribute('pattern', '[A-Za-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$');
   }
 
+  if (target.name === 'phone') {
+    target.setAttribute('minlength', 19);
+  }
+
   if (target.name === 'name') {
-    target.setAttribute('pattern', '^[a-zA-Zа-яёА-ЯЁ ]{3,20}$');
+    target.setAttribute('pattern', '^[a-zA-Zа-яёА-ЯЁ0-9 ]{3,20}$');
     target.setAttribute('maxlength', 50);
-    target.value = target.value.replace(/[^A-Za-zА-Яа-яЁё ]/gi, '');
+    target.value = target.value.replace(/[^A-Za-zА-Яа-яЁё0-9 ]/gi, '');
   }
 
   if (target.name === 'message') {
@@ -177,6 +177,36 @@ function maskPhone(selector, masked = '+7 (___) -___-__-__') {
 maskPhone('[name="phone"]');
 
 
-
+$(document).ready(function(){
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "Name must be at least 2 letters long",
+          name: "Please specify your name"
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "We need your phone number to contact you",
+          minlength: "Please enter your phone number",
+        },
+      },
+    });
+    $(".newsletter__subscribe").validate({
+      errorClass: "invalid",
+      messages: {        
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },       
+      },
+    });
+  });
+});
 
 

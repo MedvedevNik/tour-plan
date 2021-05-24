@@ -15,7 +15,8 @@
     height: 230px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        width: 47%
 @media (min-width: 992px)
   .button
     &:hover
@@ -171,7 +172,9 @@
       row-gap: 45px
       grid-template-rows: repeat(4, minmax(75px, min-content))
     &__input
-      flex-basis: 47%
+      width: 100%
+      &:first-child
+        margin-right: 0
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -429,7 +432,10 @@
     &__contact-details &__title
       margin-bottom: 22px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
+      &-group:first-child
+        margin-bottom: 15px
     &__icon-wrapper
       min-width: 30px
     &__item--mb-2
